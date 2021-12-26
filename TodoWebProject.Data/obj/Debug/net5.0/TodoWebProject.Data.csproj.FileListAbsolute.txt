@@ -1,0 +1,15 @@
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\bin\Debug\net5.0\TodoWebProject.Data.deps.json
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\bin\Debug\net5.0\TodoWebProject.Data.dll
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\bin\Debug\net5.0\ref\TodoWebProject.Data.dll
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\bin\Debug\net5.0\TodoWebProject.Data.pdb
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\bin\Debug\net5.0\TodoWebProject.Model.dll
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\bin\Debug\net5.0\TodoWebProject.Model.pdb
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.csprojAssemblyReference.cache
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.AssemblyInfoInputs.cache
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.AssemblyInfo.cs
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.csproj.CopyComplete
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.dll
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\ref\TodoWebProject.Data.dll
+C:\Users\Lenovo\RiderProjects\TodoWebProject\TodoWebProject.Data\obj\Debug\net5.0\TodoWebProject.Data.pdb
