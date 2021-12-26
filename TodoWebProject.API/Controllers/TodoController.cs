@@ -14,13 +14,15 @@ namespace TodoWebProject.Controllers
         private readonly IGetTodoByIdServiceRequest _getTodoByIdServiceRequest;
         private readonly IInsertTodoServiceRequest _insertTodoServiceRequest;
         private readonly IUpdateTodoByIdServiceRequest _updateTodoByIdServiceRequest;
+        private readonly IDeleteTodoByIdServiceRequest _deleteTodoByIdServiceRequest;
 
-        public TodoController(IGetAllTodosServiceRequest getAllTodosServiceRequest, IGetTodoByIdServiceRequest getTodoByIdServiceRequest, IInsertTodoServiceRequest insertTodoServiceRequest, IUpdateTodoByIdServiceRequest updateTodoByIdServiceRequest)
+        public TodoController(IGetAllTodosServiceRequest getAllTodosServiceRequest, IGetTodoByIdServiceRequest getTodoByIdServiceRequest, IInsertTodoServiceRequest insertTodoServiceRequest, IUpdateTodoByIdServiceRequest updateTodoByIdServiceRequest, IDeleteTodoByIdServiceRequest deleteTodoByIdServiceRequest)
         {
             _getAllTodosServiceRequest = getAllTodosServiceRequest;
             _getTodoByIdServiceRequest = getTodoByIdServiceRequest;
             _insertTodoServiceRequest = insertTodoServiceRequest;
             _updateTodoByIdServiceRequest = updateTodoByIdServiceRequest;
+            _deleteTodoByIdServiceRequest = deleteTodoByIdServiceRequest;
         }
 
         [HttpGet("all")]
@@ -42,9 +44,15 @@ namespace TodoWebProject.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<bool> UpdateTodoById([FromBody] InsertTodoDataModel model, int id)
+        public async Task<bool> UpdateTodoById([FromBody]InsertTodoDataModel model, int id)
         {
             return await _updateTodoByIdServiceRequest.UpdateTodoById(model, id);
+        }
+
+        [HttpDelete("delete")]
+        public async Task<bool> DeleteTodoById([FromBody]InsertTodoDataModel model, int id)
+        {
+            return await _deleteTodoByIdServiceRequest.DeleteTodoById(model, id);
         }
 
     }
