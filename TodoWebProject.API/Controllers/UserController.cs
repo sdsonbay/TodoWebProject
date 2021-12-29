@@ -30,5 +30,29 @@ namespace TodoWebProject.Controllers
         {
             return await _getAllUsersServiceRequest.GetAllUsers();
         }
+
+        [HttpGet("{id}")]
+        public async Task<GetUserDataModel> GetUserById(int id)
+        {
+            return await _getUserByIdServiceRequest.GetUserById(id);
+        }
+
+        [HttpPost("insert")]
+        public async Task<bool> InsertUser([FromBody] InsertUserDataModel model)
+        {
+            return await _insertUserServiceRequest.InsertUser(model);
+        }
+
+        [HttpPut("update")]
+        public async Task<bool> UpdateUserById([FromBody] InsertUserDataModel model, int id)
+        {
+            return await _updateUserByIdServiceRequest.UpdateUserById(model, id);
+        }
+
+        [HttpDelete("delete")]
+        public async Task<bool> DeleteUserById([FromBody]InsertUserDataModel model, int id)
+        {
+            return await _deleteUserByIdServiceRequest.DeleteUserById(model, id);
+        }
     }
 }
