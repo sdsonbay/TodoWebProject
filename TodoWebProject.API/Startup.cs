@@ -13,8 +13,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using TodoWebProject.Controllers;
 using TodoWebProject.Data.TodoData;
+using TodoWebProject.Data.UserData;
 using TodoWebProject.Data.Utils;
 using TodoWebProject.Service.TodoService;
+using TodoWebProject.Service.UserService;
 
 namespace TodoWebProject
 {
@@ -40,6 +42,9 @@ namespace TodoWebProject
             services.AddSingleton<IInsertTodoDataRequest, InsertTodoDataRequest>();
             services.AddSingleton<IUpdateTodoByIdDataRequest, UpdateTodoByIdDataRequest>();
             services.AddSingleton<IDeleteTodoByIdDataRequest, DeleteTodoByIdDataRequest>();
+
+            services.AddSingleton<IGetAllUsersDataRequest, GetAllUsersDataRequest>();
+            services.AddSingleton<IGetUserByIdDataRequest, GetUserByIdDataRequest>();
             
             // Services
 
@@ -49,9 +54,14 @@ namespace TodoWebProject
             services.AddSingleton<IUpdateTodoByIdServiceRequest, UpdateTodoByIdServiceRequest>();
             services.AddSingleton<IDeleteTodoByIdServiceRequest, DeleteTodoByIdServiceRequest>();
             
+            services.AddSingleton<IGetAllUsersServiceRequest, GetAllUsersServiceRequest>();
+            services.AddSingleton<IGetUserByIdServiceRequest, GetUserByIdServiceRequest>();
+            
             // Controller
 
             services.AddSingleton<TodoController>();
+
+            services.AddSingleton<UserController>();
             
             services.AddControllers();
             services.AddSwaggerGen(c =>
