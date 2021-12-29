@@ -14,13 +14,15 @@ namespace TodoWebProject.Controllers
         private readonly IGetUserByIdServiceRequest _getUserByIdServiceRequest;
         private readonly IInsertUserServiceRequest _insertUserServiceRequest;
         private readonly IUpdateUserByIdServiceRequest _updateUserByIdServiceRequest;
+        private readonly IDeleteUserByIdServiceRequest _deleteUserByIdServiceRequest;
 
-        public UserController(IGetAllUsersServiceRequest getAllUsersServiceRequest, IGetUserByIdServiceRequest getUserByIdServiceRequest, IInsertUserServiceRequest insertUserServiceRequest, IUpdateUserByIdServiceRequest updateUserByIdServiceRequest)
+        public UserController(IGetAllUsersServiceRequest getAllUsersServiceRequest, IGetUserByIdServiceRequest getUserByIdServiceRequest, IInsertUserServiceRequest insertUserServiceRequest, IUpdateUserByIdServiceRequest updateUserByIdServiceRequest, IDeleteUserByIdServiceRequest deleteUserByIdServiceRequest)
         {
             _getAllUsersServiceRequest = getAllUsersServiceRequest;
             _getUserByIdServiceRequest = getUserByIdServiceRequest;
             _insertUserServiceRequest = insertUserServiceRequest;
             _updateUserByIdServiceRequest = updateUserByIdServiceRequest;
+            _deleteUserByIdServiceRequest = deleteUserByIdServiceRequest;
         }
 
         [HttpGet("all")]
