@@ -11,10 +11,16 @@ namespace TodoWebProject.Controllers
     public class UserController: Controller
     {
         private readonly IGetAllUsersServiceRequest _getAllUsersServiceRequest;
+        private readonly IGetUserByIdServiceRequest _getUserByIdServiceRequest;
+        private readonly IInsertUserServiceRequest _insertUserServiceRequest;
+        private readonly IUpdateUserByIdServiceRequest _updateUserByIdServiceRequest;
 
-        public UserController(IGetAllUsersServiceRequest getAllUsersServiceRequest)
+        public UserController(IGetAllUsersServiceRequest getAllUsersServiceRequest, IGetUserByIdServiceRequest getUserByIdServiceRequest, IInsertUserServiceRequest insertUserServiceRequest, IUpdateUserByIdServiceRequest updateUserByIdServiceRequest)
         {
             _getAllUsersServiceRequest = getAllUsersServiceRequest;
+            _getUserByIdServiceRequest = getUserByIdServiceRequest;
+            _insertUserServiceRequest = insertUserServiceRequest;
+            _updateUserByIdServiceRequest = updateUserByIdServiceRequest;
         }
 
         [HttpGet("all")]

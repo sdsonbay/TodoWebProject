@@ -46,6 +46,7 @@ namespace TodoWebProject
             services.AddSingleton<IGetAllUsersDataRequest, GetAllUsersDataRequest>();
             services.AddSingleton<IGetUserByIdDataRequest, GetUserByIdDataRequest>();
             services.AddSingleton<IInsertUserDataRequest, InsertUserDataRequest>();
+            services.AddSingleton<IUpdateUserByIdDataRequest, UpdateUserByIdDataRequest>();
             
             // Services
 
@@ -58,6 +59,7 @@ namespace TodoWebProject
             services.AddSingleton<IGetAllUsersServiceRequest, GetAllUsersServiceRequest>();
             services.AddSingleton<IGetUserByIdServiceRequest, GetUserByIdServiceRequest>();
             services.AddSingleton<IInsertUserServiceRequest, InsertUserServiceRequest>();
+            services.AddSingleton<IUpdateUserByIdServiceRequest, UpdateUserByIdServiceRequest>();
             
             // Controller
 
