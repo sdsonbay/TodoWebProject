@@ -6,7 +6,7 @@ namespace TodoWebProject.Service.UserService
 {
     public interface IDeleteUserByIdServiceRequest
     {
-        Task<bool> DeleteUserById(InsertUserDataModel model, int id);
+        Task<bool> DeleteUserById(int id);
     }
     public class DeleteUserByIdServiceRequest: IDeleteUserByIdServiceRequest
     {
@@ -17,9 +17,9 @@ namespace TodoWebProject.Service.UserService
             _deleteUserByIdDataRequest = deleteUserByIdDataRequest;
         }
 
-        public async Task<bool> DeleteUserById(InsertUserDataModel model, int id)
+        public async Task<bool> DeleteUserById(int id)
         {
-            return await _deleteUserByIdDataRequest.DeleteUserById(model, id);
+            return await _deleteUserByIdDataRequest.DeleteUserById(id);
         }
     }
 }

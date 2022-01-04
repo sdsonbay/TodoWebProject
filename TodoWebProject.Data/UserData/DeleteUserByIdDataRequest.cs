@@ -7,7 +7,7 @@ namespace TodoWebProject.Data.UserData
 {
     public interface IDeleteUserByIdDataRequest
     {
-        Task<bool> DeleteUserById(InsertUserDataModel model, int id);
+        Task<bool> DeleteUserById(int id);
     }
     public class DeleteUserByIdDataRequest: IDeleteUserByIdDataRequest
     {
@@ -18,7 +18,7 @@ namespace TodoWebProject.Data.UserData
             _dbConnection = dbConnection;
         }
 
-        public async Task<bool> DeleteUserById(InsertUserDataModel model, int id)
+        public async Task<bool> DeleteUserById(int id)
         {
             var query = $"DELETE FROM User WHERE Id = {id}";
             using var conn = _dbConnection.GetConnection();

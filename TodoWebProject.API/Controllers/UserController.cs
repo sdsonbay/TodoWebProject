@@ -50,9 +50,9 @@ namespace TodoWebProject.Controllers
         }
 
         [HttpDelete("delete")]
-        public async Task<bool> DeleteUserById([FromBody]InsertUserDataModel model, int id)
+        public async Task<bool> DeleteUserById(int id)
         {
-            return await _deleteUserByIdServiceRequest.DeleteUserById(model, id);
+            return await _deleteUserByIdServiceRequest.DeleteUserById(id);
         }
     }
 }

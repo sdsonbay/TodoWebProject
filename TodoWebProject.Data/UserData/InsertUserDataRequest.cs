@@ -24,5 +24,6 @@ namespace TodoWebProject.Data.UserData
             using var conn = _dbConnection.GetConnection();
             var response = await conn.ExecuteAsync(query, model);
             return response > 0;
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace TodoWebProject.Data.UserData
 {
     public interface IUpdateUserByIdDataRequest
     {
-        
+        Task<bool> UpdateUserById(InsertUserDataModel model, int id);
     }
     public class UpdateUserByIdDataRequest: IUpdateUserByIdDataRequest
     {

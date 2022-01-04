@@ -22,5 +22,6 @@ namespace TodoWebProject.Service.TodoService
         public async Task<bool> UpdateTodoById(InsertTodoDataModel model, int id)
         {
             return await _updateTodoByIdDataRequest.UpdateTodoById(model, id);
+        }
     }
 }
